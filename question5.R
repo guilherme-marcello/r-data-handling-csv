@@ -1,0 +1,10 @@
+names <- c('Guilherme','Lemos','Marcello','Luis','Catarina','Afonso','Carvalho','Ronaldo','Messi','Neymar')
+age <- c(16,16,16,16,16,16,10,34,32,27)
+class <- c('Physics','Physics','Physics','Math','Biology','Biology','Theater','Math','Math','Theater')
+df <- data.frame(names,age,class)
+height <- c(170,170,170,168,155,175,170,185,172,173)
+newdf <- cbind(df,height)
+lastrow <- data.frame(names='LastPerson',age=92,class='PE',height=192)
+newnewdf <- rbind(newdf,lastrow)
+
+write.csv(newnewdf,'students.csv')
